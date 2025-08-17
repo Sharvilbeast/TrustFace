@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear TrustFace Storage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a0e27;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(21, 25, 53, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #4a9eff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #a0aec0;
+        }
+        button {
+            background: linear-gradient(90deg, #4a9eff, #00d4ff);
+            border: none;
+            border-radius: 12px;
+            padding: 14px 20px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .success {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            border-radius: 12px;
+            padding: 12px;
+            color: #4ade80;
+            font-size: 14px;
+            margin: 20px 0;
+            display: none;
+        }
+        .link {
+            color: #4a9eff;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TrustFace - Clear Login Data</h1>
+        <p>This utility will clear all stored login information, tokens, and authentication data from your browser for the TrustFace application.</p>
+        
+        <div id="success" class="success">
+            All login data has been successfully cleared!
+        </div>
+        
+        <button id="clearBtn">Clear All Login Data</button>
+        
+        <p style="margin-top: 20px;">
+            <a href="/" class="link">Return to Login Page</a>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('clearBtn').addEventListener('click', function() {
+            // Clear localStorage
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            
+            // Clear sessionStorage
+            sessionStorage.clear();
+            
+            // Clear cookies related to the app
+            document.cookie.split(";").forEach(function(c) {
+                document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+            });
+            
+            // Show success message
+            document.getElementById('success').style.display = 'block';
+            
+            // Disable the button
+            this.disabled = true;
+            this.textContent = 'Data Cleared Successfully';
+        });
+    </script>
+</body>
+</html>

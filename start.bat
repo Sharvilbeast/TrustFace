@@ -1,0 +1,16 @@
+@echo off
+echo Starting TrustFace 2.0...
+
+echo Starting backend server...
+cd backend
+start "Backend Server" cmd /k "python app.py"
+
+echo Starting frontend server...
+cd ../frontend
+start "Frontend Server" cmd /k "npm start"
+
+echo TrustFace 2.0 is starting...
+echo Backend: http://localhost:8000
+echo Frontend: http://localhost:3000
+echo Press any key to exit this window...
+pause > nul

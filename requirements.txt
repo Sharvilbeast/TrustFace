@@ -1,0 +1,17 @@
+
+fastapi
+uvicorn
+python-multipart
+face-recognition
+opencv-python
+numpy>=1.21.0
+Pillow
+SQLAlchemy
+python-jose[cryptography]
+PyJWT
+passlib[bcrypt]
+python-dotenv
+pandas
+scikit-learn
+cmake
+scipy

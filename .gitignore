@@ -1,0 +1,37 @@
+# Node (frontend)
+frontend/node_modules/
+frontend/build/
+frontend/.cache/
+frontend/.pnp*
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Python (backend)
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# App data/artifacts
+backend/backend/uploads/
+backend/backend/known_faces/
+backend/trustface.db
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+*.env
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
