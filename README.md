@@ -1,7 +1,7 @@
 
-# TrustFace 2.0 - Advanced Face Recognition for Competitive Exams
+# TrustFace  - Advanced Face Recognition for Competitive Exams
 
-TrustFace 2.0 is a state-of-the-art face recognition system designed specifically for competitive exams. It provides secure biometric authentication, exam session management, and identity verification to ensure exam integrity.
+TrustFace  is a state-of-the-art face recognition system designed specifically for competitive exams. It provides secure biometric authentication, exam session management, and identity verification to ensure exam integrity.
 
 ## Features
 
@@ -86,7 +86,7 @@ TrustFace 2.0 is a state-of-the-art face recognition system designed specificall
 
 ## Face Recognition Accuracy
 
-TrustFace 2.0 uses advanced face recognition algorithms to achieve high accuracy. The system:
+TrustFace  uses advanced face recognition algorithms to achieve high accuracy. The system:
 
 - Uses deep learning-based face detection
 - Employs robust feature extraction techniques
