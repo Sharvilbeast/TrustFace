@@ -1,5 +1,5 @@
 
-# TrustFace  - Advanced Face Recognition for Competitive Exams
+# TrustFace - Advanced Face Recognition for Competitive Exams
 
 TrustFace  is a state-of-the-art face recognition system designed specifically for competitive exams. It provides secure biometric authentication, exam session management, and identity verification to ensure exam integrity.
 
